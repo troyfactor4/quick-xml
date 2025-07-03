@@ -25,6 +25,9 @@ encoding_rs = { version = "0.8", optional = true }
 serde = { version = ">=1.0.139", optional = true }
 tokio = { version = "1.10", optional = true, default-features = false, features = ["io-util"] }
 memchr = "2.1"
+base64 = "0.21"
+rsa = { version = "0.9", default-features = false, features = ["pem"] }
+sha2 = { version = "0.10", features = ["oid"] }
 
 [dev-dependencies]
 # msrv workflow uses `cargo check` which triesto resolvee all dependencies, even

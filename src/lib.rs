@@ -54,6 +54,8 @@
 
 #[cfg(feature = "serialize")]
 pub mod de;
+/// XML Digital Signature utilities.
+pub mod dsig;
 pub mod encoding;
 pub mod errors;
 pub mod escape;
@@ -71,6 +73,7 @@ pub mod utils;
 pub mod writer;
 
 // reexports
+pub use crate::dsig::{sign_document, DigestMethod};
 pub use crate::encoding::Decoder;
 #[cfg(feature = "serialize")]
 pub use crate::errors::serialize::{DeError, SeError};
